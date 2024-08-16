@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generated Image</title>
+</head>
+<body>
+    <h1>Generated Image</h1>
+    {% if image_url %}
+        <img src="{{ image_url }}" alt="Generated Image" />
+        <br>
+        <a href="{{ image_url }}" download="generated_image.png">
+            <button>Download Image</button>
+        </a>
+    {% else %}
+        <p>No image URL found. Please try again.</p>
+    {% endif %}
+    <a href="{% url 'image_generation' %}">Generate another image</a>
+</body>
+</html>
